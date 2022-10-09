@@ -1,0 +1,50 @@
+/**app.wxss**/
+@import "./assets/iconfont/iconfont.wxss";
+@import "./assets/iconfont/voice.wxss";
+@import "./assets/iconfont/on.wxss";
+@import "./assets/iconfont/camera.wxss";
+@import "./assets/iconfont/laba.wxss";
+@import "./assets/iconfont/map.wxss";
+@import "./assets/iconfont/wenjian.wxss";
+@import "./assets/iconfont/file.wxss";
+@import "./assets/iconfont/pdf.wxss";
+@import "./assets/iconfont/word.wxss";
+@import "./assets/iconfont/download.wxss";
+@import "./assets/iconfont/down.wxss";
+@import "./assets/iconfont/xiazai.wxss";
+@import "./assets/iconfont/doc.wxss";
+@import "./assets/iconfont/exchange.wxss";
+@import "./assets/iconfont/develop.wxss";
+@import "./assets/iconfont/fix.wxss";
+@import "./assets/iconfont/kaifa.wxss";
+@import "./assets/iconfont/huatong.wxss";
+@import "./assets/iconfont/about.wxss";
+
+
+
+
+.container {
+  padding: 0;
+  background-color:#f5fafe;
+  height: 100vh;
+  display: flex;
+  flex-direction:column;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #333;
+} 
+
+.copyright {
+  align-self:center;
+  flex:1;
+  display:flex;
+  align-items:flex-end;
+  padding-bottom: 20rpx;
+  font-size: 28rpx;
+  color:#999;
+}
+
+.view-hover {
+  background-color: #f3f3f3!important;
+}
+
