@@ -1,8 +1,0 @@
-<!--pages/log/log.wxml-->
-<!---appsecret-->
-<!--02ec40e3b7ad981f2ff5f1ee819dd4bc-->
-<view class="container">
-  <view class="userinfo">
- <image bindtap="bindViewTap" src="https://hbimg.huabanimg.com/3093f35682a046e6fc239f02b3ebf80ca307b2c82e5d8a-3gurMX_fw658/format/webp" ></image>
- </view>
- </view>
