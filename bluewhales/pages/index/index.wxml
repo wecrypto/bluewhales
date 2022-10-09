@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="change">
+    <navigator url="/pages/change/change" hover-class="navigator-hover">
+      <!--<text class="iconfont-mini icon-change"></text>-->到{{curLang.chs}}
+      <text class="iconfont icon-down"></text>
+    </navigator>
+  </view>
+  <view class="input-area">
+    <!--<text class="iconfont icon-close" hidden="{{hideClearIcon}}" bindtap='onTapClose'></text>-->
+    <text wx:if="{{query}}" class="iconfont icon-close" bindtap='onTapClose'></text>
+    <view class="textarea-wrap">
+      <textarea  style="font-size: 15px"  maxlength="5000" placeholder='请输入要翻译的文本' placeholder-style='color: #8995a1; font-size: 12px' bindinput='onInput' bindconfirm='onConfirm' bindblur='onConfirm' value="{{query}}"></textarea>
+    </view>
+    <view class="text-area">
+      <view class="text-title">译文</view>
+      <view class="text-result" wx:for="{{result}}" wx:key="index">
+        <text  style="font-size: 15px" selectable="true" bindtap='wordYun'>{{item.dst}}</text>
+        <text name="btn" class="iconfon icon-laba" bindtap='wordYun'></text>
+      </view>
+    </view>
+  </view>
+  
+    <view class="pic myRecode" wx:if="{{recordState == true}}">
+      <view class="recode">
+        <text class="iconf icon-tubiao-open"></text>
+        <view class="ripple"></view>
+        <view class="ripple {{recordState?'rippleAnimation1':''}}"></view>
+        <view class="ripple {{recordState?'rippleAnimation2':''}}"></view>
+        <view class="ripple {{recordState?'rippleAnimation3':''}}"></view>
+      </view>
+    </view>
+ <!-- </view>-->
+ 
+<view class="container">
+    <view class="weui-grids">
+        <view class="weui-grid" wx:for="{{routers}}" wx:key="name">
+          
+                <view class='weui-grid__bg'>
+                    <view class="weui-grid__icon">
+                       <text class="{{item.icon}}" data-path="{{filePath}}"  bindtap='{{item.tap}}' bindtouchstart="{{item.start}}" bindtouchend="{{item.end}}" ></text>  
+                    </view>
+                    <text class="weui-grid__label"   data-path="{{filePath}}"  bindtap='{{item.tap}}' bindtouchstart="{{item.start}}" bindtouchend="{{item.end}}">{{item.name}}</text>
+                </view>         
+        </view>
+    </view>
+  <text class="iconfont icon-msnui-more" style="text-align:center;color: #8995a1;" bindtap="clickMask"></text> 
+     <!--<text class="iconfont icon-msnui-more" style="text-align:center;color: #8995a1;" bindtap="clickshow"></text>--> 
+</view>
+
+<!--<view class='mask' hidden='{{show}}'>
+  <view class='modal-content transparent' style='position:fixed;height:100%;width:100%;'>
+   <scroll-view scroll-y class='main-content'>
+    <video id="myVideo" src="cloud://fanyi.6661-fanyi-1302120986/解说视频.mp4" style="width: 100%; height:100%;text-align:center"></video>
+    </scroll-view>  
+    <view class='modal-btn-wrapper'>
+      <view class='cancel-btn' style='color:rgba(7,17,27,0.6);border-radius:80%;' bindtap='cancel'>取消</view>
+      <view class='confirm-btn' style='color:#13b5f5;border-radius:80%;' bindtap='confirm'>确定</view>
+    </view>
+  </view>
+</view>-->
+</view>
