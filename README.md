@@ -1,6 +1,6 @@
 # miniapp-fanyitool
 
-<h3>>Wechat mini program - translation assistant</h3>
+<h3>Wechat mini program - translation assistant</h3>
 <p>Blue Whale translation applets are designed to meet the needs of users in multiple scenarios. At present, it provides photo translation, picture translation, text translation, simultaneous speech translation, speech synthesis, document translation and other functions, which can be said to be integrated into one. Among them, the text translation support up to 200 languages, and for collateral literature, finance and finance, biomedicine, science and technology electronics, hydraulic machinery and other vertical fields of professional translation.</p>
 
 <h5>微信小程序-翻译助手</h5>
