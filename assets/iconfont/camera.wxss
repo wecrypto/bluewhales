@@ -16,6 +16,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-xiangji2:before {
+.icon-xiangji:before {
   content: "\e645";
 }

@@ -1,4 +1,4 @@
 <!--pages/lunbo/lunbo.wxml-->
 <view class="container" id="first" bindtouchmove='handlePan' bindtap='handlePan' >
- <image style="height:100%;width:100%" src="{{images}}" />
+ <image style="height:100%;width:100%" src="/image/top.jpg" />
 </view>

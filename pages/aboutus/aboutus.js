@@ -6,7 +6,8 @@ Page({
     last_pos: 0,
     swiperImgs: [
       
-      cloudFileBase + "/images/jieshao.png",
+      //cloudFileBase + "/images/introduce.png",
+      "/image/introduce.jpg"
     ]
   },
   bindchange: function(e){

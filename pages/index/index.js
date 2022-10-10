@@ -56,7 +56,7 @@ var msg, token, IMEI, filePath
       routers: [
         {
             name: 'Camera',
-            icon:"iconfont icon-xiangji2",
+            icon:"iconfont icon-xiangji",
             tap:'putimg',
             code: '10'
         },
@@ -68,13 +68,13 @@ var msg, token, IMEI, filePath
         },
         {
             name: 'DOC',
-            icon: 'iconf icon-doc',
+            icon: 'iconfont icon-doc',
             tap:'openDOCHandle',
             code: '10'
         },
         {
             name: 'PDF',
-            icon: 'iconf icon-pdf',
+            icon: 'iconfont icon-pdf',
             tap:'openPDFHandle',
             code: '11'
         },

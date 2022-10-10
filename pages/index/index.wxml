@@ -21,8 +21,7 @@
   </view>
     <view class="pic myRecode" wx:if="{{recordState == true}}">
       <view class="recode">
-       <text class="iconf icon-tubiao-open"></text>
-        <!--<view class="ripple"></view>-->
+         <!--<text class="iconf icon-tubiao-open"></text>-->    
         <view class="ripple {{recordState?'rippleAnimation1':''}}"></view>
         <view class="ripple {{recordState?'rippleAnimation2':''}}"></view>
         <view class="ripple {{recordState?'rippleAnimation3':''}}"></view>

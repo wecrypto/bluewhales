@@ -3,8 +3,7 @@ const cloudFileBase = "cloud://fanyi.6661-fanyi-1302120986"
 Page({
   data: {
     // 第一次进入的开屏动画
-   //images: cloudFileBase + "/images/lanjin.png"
-    images: cloudFileBase + "/images/blue.jpg"
+    images: cloudFileBase + "/images/top.jpg"
   },
   handlePan:function(e){
     console.log("触发跳转");
