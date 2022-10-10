@@ -43,6 +43,7 @@ var msg, token, IMEI, filePath
       query: '',
       hideClearIcon: true,
       result: [],
+      yiwen:"",
       curLang: {},
       recordState: false, //录音状态
       content: '', //内容
@@ -97,11 +98,26 @@ var msg, token, IMEI, filePath
     
     ]
     },
-    
   attached: function () {
     this.videoCtx = wx.createVideoContext('myVideo', this)
   },
   methods: {
+    //译文长按复制功能
+    fuzhi: function (e) {
+      wx.setClipboardData({
+        data: this.data.yiwen,
+        success (res) {
+          wx.getClipboardData({
+            success (res) {
+              wx.showToast({
+                title: '译文已复制',
+                duration:1300
+              })
+            }
+          })
+        }
+      })      
+     },  
     develop:function(){
       wx.navigateTo({
         url: '../develop/develop',
@@ -160,6 +176,7 @@ var msg, token, IMEI, filePath
      console.log('focus')
    },
    onTapClose: function() {
+     this.end();
      this.setData({
        query: '',
        hideClearIcon: true,
@@ -173,7 +190,8 @@ var msg, token, IMEI, filePath
        to: this.data.curLang.lang
      }).then(res => {
        this.setData({
-         'result': res.trans_result
+         'result': res.trans_result,
+         'yiwen':JSON.stringify(res.trans_result[0].dst).replace(/\"/g, "")
        })
        let history = wx.getStorageSync('history') || []
        history.unshift({
@@ -701,27 +719,12 @@ var msg, token, IMEI, filePath
        console.log(res);
      })
    },
-   // 文字转语音
+   // 文字转语音(有效)
    wordYun: function(e) {
-     var that = this;
-     var con = JSON.stringify(this.data.result).replace("src", "");
-     con = con.replace("dst", "")
-     var final = " ";
-     var count = 0;
-     for (var i in con) {
-       var a = con[i];
-       if (a == ':') {
-         count++
-       }
-       if (count == 2) {
-         final = final.concat(a);
-       }
-     }
-     console.log("语音为" + final);
      plugin.textToSpeech({
        lang: "zh_CN",
        tts: true,
-       content: final,
+       content: this.data.yiwen,
        success: function(res) {
          console.log(res);
          console.log("succ tts", res.filename);
@@ -729,15 +732,13 @@ var msg, token, IMEI, filePath
            src: res.filename
          })
          that.yuyinPlay();
- 
        },
        fail: function(res) {
          console.log("fail tts", res)
        }
      })
    },
- 
-   //播放语音
+    //播放语音
    yuyinPlay: function(e) {
      if (this.data.src == '') {
        console.log(暂无语音);
@@ -746,7 +747,6 @@ var msg, token, IMEI, filePath
      this.innerAudioContext.src = this.data.src //设置音频地址
      this.innerAudioContext.play(); //播放音频
    },
- 
    // 结束语音
    end: function(e) {
      this.innerAudioContext.pause(); //暂停音频
@@ -757,17 +757,10 @@ var msg, token, IMEI, filePath
        img: ''
      })
    },
-   onShareAppMessage: function () {},
-      
+   onShareAppMessage: function () {}, 
         clickMask() {
           this.setData({show: false})
         },
-        // clickshow(){
-        //   // this.setData({shows: false})
-        //   wx.navigateTo({
-        //     url: '../aboutus/aboutus',
-        //   })
-        // },
         cancel() {
           this.setData({ show:true,
           shows:true})
@@ -780,6 +773,5 @@ var msg, token, IMEI, filePath
           this.triggerEvent('confirm')
           this.videoCtx.pause();
         }
-  
     }
   })

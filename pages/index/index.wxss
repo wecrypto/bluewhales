@@ -6,13 +6,21 @@
   padding: 20rpx 40rpx;
   display: flex;
   align-items: center;
+  position: relative;
 }
 .change .icon-right {
   color: #888;
 }
 .change .icon-down {
-  color: #8995a1;
-  font-size: 20rpx;
+  color: #e04d08;
+  font-size: 30rpx;
+}
+.change .icon-close{
+  position: absolute; 
+  color: rgb(243, 17, 17);
+  font-size:25px;
+  right: 30px;
+  font-weight: 600;
 }
 
 .input-area {

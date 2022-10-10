@@ -1,7 +1,7 @@
 <!--pages/about/about.wxml-->
 <view class="my-container">
   <image src="../../image/logo.png" id="logo"></image>
-  <text id="version">蓝鲸翻译 1.0.0</text>
+  <text id="version">蓝鲸翻译 V2.0.1</text>
 
   <view class="t-buttons">
     <navigator url="../aboutus/aboutus">
