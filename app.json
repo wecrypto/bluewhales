@@ -20,8 +20,8 @@
   "tabBar": {
     "borderStyle": "white",
     "position": "top",
-    "color": "#595959",
-    "selectedColor": "#1c1b21",
+     "color": "#8995a1",
+    "selectedColor": "#8995a1",
     "list": [
       {
         "pagePath": "pages/index/index",

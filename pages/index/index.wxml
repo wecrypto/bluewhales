@@ -1,27 +1,34 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="change">
-    <navigator url="/pages/change/change" hover-class="navigator-hover">
+  <view class="change" style="display: flex;">
+    <navigator url="/pages/change/change" hover-class="navigator-hover" style="margin-left: 0.8%;color: #8995a1;">
     到{{curLang.chs}}
       <text class="iconfont icon-down"></text>
     </navigator>
-    <text wx:if="{{query}}" class="iconfont icon-close"  style="font-size: 22px; display:flex; flex-direction: row-reverse;" bindtap='onTapClose'></text>
+    <text wx:if="{{query||isCopy}}" class="iconfont icon-close" style="font-size: 22px; display:flex; flex-direction: row-reverse;" bindtap='onTapClose'></text>
   </view>
   <view class="input-area">
     <view class="textarea-wrap">
-      <textarea  style="font-size: 15px"  maxlength="5000" placeholder='请输入要翻译的文本' placeholder-style='color: #8995a1; font-size: 12px' bindinput='onInput' bindconfirm='onConfirm' bindblur='onConfirm' value="{{query}}"></textarea>
+      <view wx:if="{{query}}" class="text-title"style='display:flex'>
+      <text style="margin-left:5.5%; margin-top:6%;">原文</text>
+      <text class="copy icon-wanquanfuzhi" style="margin-left:1%; margin-top:6%;"bindtap='copyQuery'></text>
+      </view>
+      <textarea  style="font-size: 15px; color: #8995a1"  maxlength="5000" placeholder='请粘贴或输入要翻译的文本'placeholder-style='color: #8995a1; font-size: 12px'  bindinput='onInput' bindtap='isQueryNull'
+      bindconfirm='isQueryNull' bindblur='isQueryNull' value="{{query}}">
+      </textarea>
     </view>
     <view class="text-area">
-      <view class="text-title">译文</view>
+      <view class="text-title">
+      译文
+      <text wx:if="{{isCopy}}" class="copy icon-wanquanfuzhi" bindtap='copyTranslation'></text>
+      </view>
       <view class="text-result" wx:for="{{result}}" wx:key="index" >
-        <text  style="font-size: 15px" selectable="true"  bindlongtap='fuzhi'>{{item.dst}}</text>
-        <text name="btn" class="iconfon icon-laba" bindtap='wordYun'></text>
+        <text  style="font-size: 15px;color: #8995a1" user-select="true">{{item.dst}}</text>
       </view>
     </view>
   </view>
     <view class="pic myRecode" wx:if="{{recordState == true}}">
-      <view class="recode">
-         <!--<text class="iconf icon-tubiao-open"></text>-->    
+      <view class="recode"> 
         <view class="ripple {{recordState?'rippleAnimation1':''}}"></view>
         <view class="ripple {{recordState?'rippleAnimation2':''}}"></view>
         <view class="ripple {{recordState?'rippleAnimation3':''}}"></view>
@@ -34,10 +41,10 @@
                     <view class="weui-grid__icon">
                        <text class="{{item.icon}}" data-path="{{filePath}}"  bindtap='{{item.tap}}' bindtouchstart="{{item.start}}" bindtouchend="{{item.end}}" ></text>  
                     </view>
-                    <text class="weui-grid__label"   data-path="{{filePath}}"  bindtap='{{item.tap}}' bindtouchstart="{{item.start}}" bindtouchend="{{item.end}}">{{item.name}}</text>
+                    <text class="weui-grid__label" style="color: #8995a1;"  data-path="{{filePath}}"  bindtap='{{item.tap}}' bindtouchstart="{{item.start}}" bindtouchend="{{item.end}}">{{item.name}}</text>
                 </view>         
         </view>
     </view>
-  <text class="iconfont icon-msnui-more" style="text-align:center;color: #8995a1;" bindtap="clickMask"></text> 
+  <text class="iconfont icon-msnui-more" style="text-align:center;color: #8995a1;" ></text> 
 </view>
 </view>

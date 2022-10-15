@@ -12,15 +12,14 @@
   color: #888;
 }
 .change .icon-down {
-  color: #e04d08;
+  color: #8995a1;
   font-size: 30rpx;
 }
 .change .icon-close{
   position: absolute; 
-  color: rgb(243, 17, 17);
+  color: #8995a1;
   font-size:25px;
   right: 30px;
-  font-weight: 600;
 }
 
 .input-area {
@@ -90,7 +89,8 @@
 
 .iconfont {
   font-family: "iconfont" !important;
-  font-size: 30px;
+  color: #8995a1;
+  font-size: 35px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -243,7 +243,7 @@
   text-align: center;
   font-weight: bold;
   color: #000;
-  font-size: 14px;
+  font-size: 15px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

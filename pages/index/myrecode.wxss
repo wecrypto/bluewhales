@@ -4,12 +4,12 @@
 }
 .myRecode .recode{
   display: inline-block;
-  width:50rpx;
-  height:50rpx;
-  background: #ADD8E6;
+  width:40rpx;
+  height:40rpx;
+  background: #8995a1;
   border-radius: 50%;
   text-align: center;
-  color:#fff;
+  color:#8995a1;
   line-height: 150rpx;
   position: relative;
 }
@@ -20,7 +20,7 @@
   right:0;
   bottom:0;
   border-radius: 50%;
-  border:2px solid #ADD8E6;
+  border:2px solid #8995a1;
 }
 .rippleAnimation1{
   animation: ripple 1s infinite linear;

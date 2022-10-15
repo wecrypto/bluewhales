@@ -1,5 +1,6 @@
 /**app.wxss**/
 @import "./assets/iconfont/doc.wxss";
+@import "./assets/iconfont/ppt.wxss";
 @import "./assets/iconfont/pdf.wxss";
 @import "./assets/iconfont/iconfont.wxss";
 @import "./assets/iconfont/voice.wxss";
@@ -9,6 +10,7 @@
 @import "./assets/iconfont/word.wxss";
 @import "./assets/iconfont/develop.wxss";
 @import "./assets/iconfont/kaifa.wxss";
+@import "./assets/iconfont/copy.wxss";
 .container {
   padding: 0;
   background-color:#f5fafe;

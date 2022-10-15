@@ -1,16 +1,16 @@
 <!--change.wxml-->
 <view class="container lang-list page">
-  <view class="title">请选择翻译的目标语种</view>
+  <view class="title" style="color: #8995a1;">请选择翻译的目标语种</view>
   <view class="content">
     <scroll-view class="person-list" enable-back-to-top style="height: {{oHeight}}px" scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true">
       <view class="person" wx:for="{{langList}}" wx:key="index" wx:for-item="item" id="{{ 'inToView'+item.id }}">
         <!-- 首字母缩写 -->
-        <view class="person-sign">{{item.sign}}</view>
+        <view class="person-sign" style="color: #8995a1;">{{item.sign}}</view>
         <!-- 选项 -->
         <view class="person-content">
-          <view class="item person-cont border" wx:for="{{item.sublist}}" wx:key="id" data-chs="{{language.chs}}" data-lang="{{language.lang}}" data-index="{{index}}" wx:for-item="language" bindtap='onTapItem'  hover-class="view-hover">
+          <view style="color:  #8995a1;" class="item person-cont border" wx:for="{{item.sublist}}" wx:key="id" data-chs="{{language.chs}}" data-lang="{{language.lang}}" data-index="{{index}}" wx:for-item="language" bindtap='onTapItem'  hover-class="view-hover">
             <view class="item-inner">
-              <text class="txt">{{language.chs}}</text> 
+              <text style="color:  #8995a1;"class="txt">{{language.chs}}</text> 
               <text class="iconfont icon-duihao" wx:if="{{language.lang === curLang.lang}}"></text>
             </view>
           </view>
@@ -19,7 +19,7 @@
     </scroll-view>
     <!-- 右侧字母栏 -->
     <scroll-view class="letter-list">
-        <view class="letter" wx:for="{{langList}}" wx:key="index" catchtap="chooseLetter" data-item="{{item}}">
+        <view style ="color:#8995a1;font-size: 15px;"class="letter" wx:for="{{langList}}" wx:key="index" catchtap="chooseLetter" data-item="{{item}}">
           {{item.sign}}
         </view>
     </scroll-view>
