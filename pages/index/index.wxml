@@ -45,6 +45,10 @@
                 </view>         
         </view>
     </view>
-  <text class="iconfont icon-msnui-more" style="text-align:center;color: #8995a1;" ></text> 
+    <view class="mask"wx:if="{{showmodel}}"style="display: flex;" bindtap="hideMask">
+    <image src="/image/top.jpg" style="height:80%;width:75%;" wx:if="{{showmodel}}" bindtap="hideMask">
+    </image>
+    </view>
+<text class="iconfont icon-msnui-more" style="text-align:center;color: #8995a1;" ></text>
 </view>
 </view>

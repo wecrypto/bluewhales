@@ -2,7 +2,6 @@
 App({
   onLaunch: function () {
     this.globalData.curLang = wx.getStorageSync('curLang') || this.globalData.langList[0]
-    
     wx.onAppRoute(() => {
       let pages = getCurrentPages();
       let view = pages[pages.length - 1];

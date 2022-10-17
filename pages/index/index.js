@@ -57,12 +57,13 @@ import {
       content: '', //内容
       filePath: '',
       isCopy:'',
+      showmodel:true,
       routers: [
         {
-            name: 'Camera',
-            icon:"iconfont icon-xiangji",
-            tap:'chooseImage',
-            code: '10'
+          name: 'PDF',
+          icon: 'iconfont icon-pdf',
+          tap:'openPDFHandle',
+          code: '11'
         },
         {
             name: 'Word',
@@ -77,13 +78,15 @@ import {
             code: '10'
         },
         {
-            name: 'PDF',
-            icon: 'iconfont icon-pdf',
-            tap:'openPDFHandle',
-            code: '11'
+            name: 'Camera',
+            icon:"iconfont icon-xiangji",
+            tap:'chooseImage',
+            code: '10'
+          
         },
-
+     
          {
+           
             name: 'Voice',
             icon: 'iconfont icon-yuyin',
             tap:'touchEnd',
@@ -133,8 +136,11 @@ import {
       }
     })      
    },  
-
-
+  hideMask:function(){
+   this.setData({
+     showmodel:false
+   })
+    },
   //定向到about页面
     toAbout: function(){
       wx.navigateTo({

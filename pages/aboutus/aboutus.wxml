@@ -1,5 +1,6 @@
-<view class="container" id="first-in">
-    <swiper bindchange="bindchange" duration="300" circular indicatorDots interval="3000">
-        <swiper-item wx:for="{{swiperImgs}}" wx:key="this"><image style="height:100%;width:100%" src="{{item}}" /></swiper-item>
-    </swiper>
+<view class="container" >
+  <view class="mask" style="display: flex;" bindtap="hideMask">
+    <image src="/image/introduce.jpg" style="height:90%;width:90%;margin-top: 8%;margin-left: 5%;">
+    </image>
+    </view>
 </view>

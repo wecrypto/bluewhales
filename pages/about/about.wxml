@@ -1,7 +1,7 @@
 <!--pages/about/about.wxml-->
 <view class="my-container">
   <image src="../../image/logo.png" id="logo"></image>
-  <text id="version" style="color: #8995a1;">蓝鲸翻译 V2.0.1</text>
+  <text id="version" style="color: #8995a1;">蓝鲸翻译 V3.0.2</text>
 
   <view class="t-buttons">
     <navigator url="../aboutus/aboutus">
@@ -10,11 +10,12 @@
         <text class="copy"></text>
       </view>
     </navigator>
+    
     <navigator url="../swiper/swiper">
       <view class="t-item">
         <text style="color: #8995a1;">新功能介绍</text>
       </view>
-    </navigator>    
+    </navigator>
     <view class="t-item" openType="contact">
       <button style="width:100%;color: #8995a1; font-weight:10;" class="text" openType="contact"><text decode="{{true}}">联系客服</text></button>
     </view> 
