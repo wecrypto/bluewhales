@@ -1,8 +1,8 @@
 # miniapp-fanyitool
 
-<h3>Wechat mini program - translation assistant</h3>
-<p>Blue Whale translation applets are designed to meet the needs of users in multiple scenarios. At present, it provides photo translation, picture translation, text translation, simultaneous speech translation, speech synthesis, document translation and other functions, which can be said to be integrated into one. Among them, the text translation support up to 200 languages, and for collateral literature, finance and finance, biomedicine, science and technology electronics, hydraulic machinery and other vertical fields of professional translation.</p>
+<h3>Multifunctional translation software</h3>
+<p>This software is designed to meet user translation needs in diverse scenarios. Currently, it provides functions such as photo translation, image translation, text translation, simultaneous voice translation, speech synthesis, and document translation. It supports up to 200 languages, and the bottom layer uses Baidu open platform interface to provide translation capability support. This software only runs on the WeChat platform. The following is the deployment version. Users can use wechat to scan the QR code to experience it</p>
 
-<h5>微信小程序-翻译助手</h5>
-<p>蓝鲸翻译小程序旨在满足多元场景下的用户翻译需求。目前提供拍照翻译，图片翻译，文字翻译，语音同步翻译，语音合成，文档翻译等功能，可谓集大成于一体者。其中，文字翻译支持高达200种语言，且针对络文学、财经金融、生物医药、科技电子、水利机械等垂直领域进行专业翻译。</p>
+<h5>多功能翻译软件</h5>
+<p>本软件旨在满足多元场景下的用户翻译需求。目前提供拍照翻译，图片翻译，文字翻译，语音同步翻译，语音合成，文档翻译等功能。其支持高达200种语言，底层采用百度开放平台接口提供翻译能力支持。本软件仅在WeChat平台运行。以下为部署版本，用户可使用wechat扫码体验</p>
 <img src="https://github.com/wecrypto/bluewhales/blob/main/bluewhale.jpg?raw=true" width='100'height='100'>
